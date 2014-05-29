@@ -14,7 +14,7 @@ class Order
     end
 
     def filter_by_price price
-	@products.select{|p| p.price == price}
+	@products.select{|p| p.price.between? price}
     	# Perhaps the select method could work here too!
     end
  
