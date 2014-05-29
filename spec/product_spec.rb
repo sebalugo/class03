@@ -43,10 +43,16 @@ describe Product do
 	end
 
 	describe "#category" do
-		it "should return the correct category"
+		it "should return the correct category" do
+		product = Product.new "gorra",5.5,:ropa
+                expect(product.category).to eql(:ropa)
+		end
 			# the category of the object created in the each block is asserted.
 
-		it "should be a symbol"
+		it "should be a symbol" do
+		product = Product.new "gorra",5.5,:ropa
+                expect(product.category).to be_kind_of(Symbol)
+		end
 			# the category should be of the class Symbol
 	end
 
