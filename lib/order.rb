@@ -23,7 +23,12 @@ class Order
       # Remember stacks & queues? Pushing might be the answer.
     end
  
-    def get_product
+    def get_product title
+	@products.each{|p| 
+	if p.title == title
+	return p
+	end
+	}
     	# you query products by a product title but the catchy thing here is
     	# that if there are multiple matches only the first one is returned.
     end
