@@ -16,11 +16,16 @@ describe Product do
 	end
 
 	describe "#title" do
-		it "should return the correct title"
+		it "should return the correct title" do
+			product = Product.new "gorra",5.5,:ropa
+			expect(product.title).to eql("gorra")
 			# the name of the object created in the each block is asserted.
-
-		it "should be a string"
+		end
+		it "should be a string" do
+			product = Product.new "gorra",5.5,:ropa
+			expect(product.title).to be_kind_of(String)
 			# the name should be of the class String
+		end
 	end
 
 	describe "#price" do
