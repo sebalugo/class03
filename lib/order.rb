@@ -5,6 +5,10 @@ class Order
 
 	def initialize yam_file
 		@products = []
+		File.open('../product.yaml','r') do |p|
+		product = Product.new p.title,p.price,p.category
+		@product.push(product)
+		end
        	  	# loading or not loading should be the key here.
         end
  
