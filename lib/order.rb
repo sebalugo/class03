@@ -3,9 +3,10 @@ class Order
 
 	# Remember that working with YAML files YAML::load and YAML::dump are your friends!
 
-	def initialize
-	  	# loading or not loading should be the key here.
-    end
+	def initialize yam_file
+		@products = []
+       	  	# loading or not loading should be the key here.
+        end
  
     def filter_by_category
     	# Perhaps you could use the select method for arrays :)
