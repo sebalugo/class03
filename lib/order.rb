@@ -8,11 +8,13 @@ class Order
        	  	# loading or not loading should be the key here.
         end
  
-    def filter_by_category
+    def filter_by_category category
+	@products.select{|p| p.category == category}
     	# Perhaps you could use the select method for arrays :)
     end
 
-    def filter_by_price
+    def filter_by_price price
+	@products.select{|p| p.price == price}
     	# Perhaps the select method could work here too!
     end
  
