@@ -3,7 +3,7 @@ require 'spec_helper.rb'
 describe Product do
 
 	before :all do	
-
+	tst = Product.new "l",5.5,:ff
 	end
 
 	describe "When creating a new a product" do
@@ -29,10 +29,16 @@ describe Product do
 	end
 
 	describe "#price" do
-		it "should return the correct price"
+		it "should return the correct price" do
+			product = Product.new "gorra",5.5,:ropa
+                        expect(product.price).to eql(5.5)
+		end
 			# the price of the object created in the each block is asserted.
 
-		it "should be a float"
+		it "should be a float" do
+			product = Product.new "gorra",5.5,:ropa
+                        expect(product.price).to be_kind_of(Float)
+		end
 			# the price should be of the class Float
 	end
 
