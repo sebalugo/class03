@@ -16,7 +16,8 @@ class Order
     	# Perhaps the select method could work here too!
     end
  
-    def add_product
+    def add_product product
+	@products.push(product)
       # Remember stacks & queues? Pushing might be the answer.
     end
  
